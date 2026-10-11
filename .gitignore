@@ -1,3 +1,8 @@
 .DS_Store
 *.tar.gz
 qa/
+node_modules/
+.next/
+out/
+.vercel/
+.env*
