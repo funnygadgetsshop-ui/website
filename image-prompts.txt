@@ -1,0 +1,38 @@
+PRODUCT: duck
+BUILT-IN IMAGEGEN; transparent_background: true
+
+Use case: product-mockup
+Asset type: transparent product image for a playful premium Polish gadgets ecommerce store
+Primary request: Create a beautiful photorealistic studio catalog photograph of a cute yellow duck silicone night light, isolated on a genuinely transparent background.
+Subject: One small rounded yellow duck lamp, with a slightly slouching relaxed pose, plump body, subtly drooping little wings, soft orange beak, two tiny orange feet, and two black dot eyes. The duck has a charming, mildly sleepy personality and premium tactile soft matte silicone. No wiring.
+Composition/framing: Square composition. One product centered with sensible even margins, full product entirely visible. Camera three-quarter front view, slightly above eye level. Product occupies about 78 percent of the frame.
+Lighting/mood: High-end studio product photography with soft large diffused key light, gentle highlights and subtle believable surface texture. Yellow material remains vibrant rather than glowing or blown out.
+Scene/backdrop: Actual transparent alpha background; no surface, no backdrop, no checkered pattern and no cast ground shadow.
+Constraints: Product only. No extra objects, no decorative graphic elements, no text, no logo, no watermark. This is a photorealistic physical object, not an illustration.
+
+
+PRODUCT: arcade
+BUILT-IN IMAGEGEN; transparent_background: true
+
+Use case: product-mockup
+Asset type: transparent product image for a playful premium Polish gadgets ecommerce store
+Primary request: Create a beautiful photorealistic studio catalog photograph of a small red tabletop retro arcade console, isolated on a genuinely transparent background.
+Subject: One compact miniature desktop arcade cabinet in bold tomato red, with softly rounded sturdy plastic housing, black screen bezel, yellow small ball-top joystick and two yellow round arcade buttons. A recessed dark screen shows just a few generic colorful pixel stars and simple pixels. The screen has no branded game, no title, no letters. Playful premium tabletop gadget with realistic dimensional form.
+Composition/framing: Square composition. One product centered with sensible even margins, full product entirely visible. Camera three-quarter front view, slightly above eye level, showing the front and right side. Product occupies about 78 percent of the frame.
+Lighting/mood: High-end studio product photography with soft large diffused key light, careful edge highlights and realistic slightly textured plastic. Bold red and yellow contrast.
+Scene/backdrop: Actual transparent alpha background; no surface, no backdrop, no checkered pattern and no cast ground shadow.
+Constraints: Product only. No extra objects, no cables, no decorative graphic elements, no text, no logo, no watermark. This is a photorealistic physical object, not an illustration.
+
+
+PRODUCT: astronaut
+BUILT-IN IMAGEGEN; transparent_background: true
+
+Use case: product-mockup
+Asset type: transparent product image for a playful premium Polish gadgets ecommerce store
+Primary request: Create a beautiful photorealistic studio catalog photograph of a cute white astronaut galaxy projector figurine, isolated on a genuinely transparent background.
+Subject: One small friendly astronaut projector, wearing a puffy white space suit with fine grey panel details, a few tiny restrained red accents and a smooth large dark gold-black reflective helmet visor. Round helmet, short adorable proportions and small boots standing securely on a compact grey sculpted moon base. Realistic molded plastic premium consumer gadget.
+Composition/framing: Square composition. One product centered with sensible even margins, full product and moon base entirely visible. Camera three-quarter front view, slightly above eye level. Product occupies about 78 percent of the frame.
+Lighting/mood: High-end studio product photography with soft large diffused key light, premium reflections on visor and accurate white material, controlled highlights.
+Scene/backdrop: Actual transparent alpha background; no surface, no backdrop, no checkered pattern and no cast ground shadow.
+Constraints: Product only. No projected light beam, no laser, no galaxy background, no extra objects, no cables, no text, no logo, no watermark. This is a photorealistic physical object, not an illustration.
+

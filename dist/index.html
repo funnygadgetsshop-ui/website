@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f33b2f">
+  <meta name="description" content="Funny Gadgets — małe gadżety, wielka frajda. Odkryj rzeczy, które podkręcają codzienność. Pokazowy sklep z trzema przykładowymi produktami.">
+  <title>Funny Gadgets — małe gadżety, wielka frajda</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalogue">Przejdź do produktów</a>
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 7h14l1 14H4L5 7ZM8 8V6a4 4 0 0 1 8 0v2"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.5 4.6a5.5 5.5 0 0 0-7.8 0l-.7.7-.7-.7a5.5 5.5 0 0 0-7.8 7.8L12 21l8.5-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 5h12v12H2V5Zm12 5h4l4 4v3h-8"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="m12 2 2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2Z"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><path d="M3 10h18v4H3zM5 14h14v7H5zM12 10v11M12 10H8a3 3 0 1 1 3-3l1 3Zm0 0h4a3 3 0 1 0-3-3l-1 3Z"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 14a4 4 0 0 0 8 0M8 9h.01M16 9h.01"/></symbol>
+  </svg>
+
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <span>Małe gadżety. <strong>Wielka frajda.</strong> <svg class="icon"><use href="#i-sparkle"/></svg></span>
+      <span><svg class="icon"><use href="#i-truck"/></svg> Darmowa dostawa od 199 zł</span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Funny Gadgets — strona główna"><img src="./assets/logo.png?v=2" alt="Funny Gadgets" width="1774" height="887"></a>
+      <nav id="main-nav" class="main-nav" aria-label="Menu główne">
+        <a href="#catalogue" data-filter="all">Wszystkie gadżety</a>
+        <a href="#catalogue" data-filter="home">Do domu</a>
+        <a href="#catalogue" data-filter="play">Do zabawy</a>
+        <a href="#gift-ideas">Na prezent <span class="nav-spark">✦</span></a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" data-action="search" aria-label="Szukaj gadżetów"><svg class="icon"><use href="#i-search"/></svg></button>
+        <button class="icon-button header-favorites" data-action="favorites" aria-label="Pokaż ulubione"><svg class="icon"><use href="#i-heart"/></svg><span id="header-favorite-count" class="small-count" hidden>0</span></button>
+        <button class="cart-button" data-action="cart"><svg class="icon"><use href="#i-bag"/></svg><span class="cart-label">Koszyk</span><span id="header-cart-count" class="cart-count">0</span></button>
+        <button class="icon-button mobile-menu-button" id="mobile-menu-button" data-action="menu" aria-label="Otwórz menu" aria-controls="main-nav" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow hero-eyebrow"><span class="red-dot"></span> 100% FRAJDY. ZERO NUDY.</div>
+        <h1 id="hero-title">Codzienność?<br><span class="hero-highlight">Podkręć ją.</span><svg class="title-spark" viewBox="0 0 64 64" aria-hidden="true"><path d="m32 3 5 20 19-10-11 19 16 9-23-1-5 21-8-20-20 8 12-18L3 20l21 5Z" fill="currentColor"/></svg></h1>
+        <p class="hero-description">Gadżety, które robią małe „wow”. <br>Do domu, na prezent i po prostu — dla siebie.</p>
+        <a class="button button-red hero-cta" href="#catalogue" data-filter="all">Znajdź swój gadżet <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <div class="hero-footnote"><span class="mini-smile"><svg class="icon"><use href="#i-smile"/></svg></span> Bo fajne rzeczy nie muszą być poważne.</div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-orbit" aria-hidden="true"></div>
+        <div class="hero-dots" aria-hidden="true"></div>
+        <span class="hero-sticker sticker-fun">UWAGA!<br><strong>ZARAŻA<br>HUMOREM</strong><svg class="icon"><use href="#i-sparkle"/></svg></span>
+        <svg class="hero-swish" viewBox="0 0 130 105" aria-hidden="true"><path d="M8 8c37 0 69 21 59 42-12 28-47 0-29-13 20-15 66 4 75 47M88 72l28 17 6-28"/></svg>
+        <img class="hero-product" src="./assets/duck.png" alt="Żółta lampka w kształcie uroczej kaczki" width="1024" height="1024" fetchpriority="high">
+        <span class="hero-sticker sticker-price"><span>DUŻO FRAJDY ZA</span><strong>79,90 <small>zł</small></strong></span>
+        <div class="hero-product-caption"><span class="caption-label">POZNAJ KACZKĘ LUZACZKĘ</span><button data-add="duck">Przygarnij ją <svg class="icon"><use href="#i-plus"/></svg></button></div>
+        <span class="hero-tiny-star star-one" aria-hidden="true">✦</span><span class="hero-tiny-star star-two" aria-hidden="true">✧</span>
+      </div>
+    </section>
+
+    <div class="fun-ticker" aria-hidden="true"><div class="ticker-track"><span>NUDZIE MÓWIMY NIE <b>✦</b> MAŁE GADŻETY, WIELKA FRAJDA <b>✦</b> PREZENT? OGARNIĘTY. <b>✦</b> NUDZIE MÓWIMY NIE <b>✦</b> MAŁE GADŻETY, WIELKA FRAJDA <b>✦</b> PREZENT? OGARNIĘTY. <b>✦</b></span></div></div>
+
+    <section id="catalogue" class="catalogue-section container" aria-labelledby="catalogue-title">
+      <div class="section-heading">
+        <div><span class="eyebrow section-eyebrow"><span class="section-number">01</span> TWOJA PORCJA DOBREGO HUMORU</span><h2 id="catalogue-title">O, to jest <span class="scribble-word">fajne.<svg viewBox="0 0 175 15" aria-hidden="true"><path d="M4 10c53-9 111-9 166-4M28 14c37-5 73-7 111-6"/></svg></span></h2></div>
+        <span class="catalogue-note">Trzy gadżety.<br>Mnóstwo możliwości.</span>
+      </div>
+      <div class="catalogue-toolbar">
+        <div class="category-filters" role="group" aria-label="Kategorie produktów">
+          <button class="filter-button is-active" data-filter="all" aria-pressed="true">Wszystkie <span>3</span></button>
+          <button class="filter-button" data-filter="home" aria-pressed="false"><svg class="icon"><use href="#i-smile"/></svg> Do domu</button>
+          <button class="filter-button" data-filter="play" aria-pressed="false"><svg class="icon"><use href="#i-star"/></svg> Do zabawy</button>
+          <button class="filter-button" data-filter="space" aria-pressed="false"><svg class="icon"><use href="#i-sparkle"/></svg> Kosmos</button>
+          <button class="filter-button" data-filter="favorites" aria-pressed="false"><svg class="icon"><use href="#i-heart"/></svg> Ulubione</button>
+        </div>
+        <label class="sort-control"><span class="sr-only">Sortuj produkty</span><select id="sort-products"><option value="featured">Polecane</option><option value="price-asc">Cena: od najniższej</option><option value="price-desc">Cena: od najwyższej</option></select><svg class="icon"><use href="#i-chevron"/></svg></label>
+      </div>
+      <div id="results-count" class="results-count" aria-live="polite">3 gadżety do odkrycia</div>
+      <div id="product-grid" class="product-grid"></div>
+      <noscript><p>Włącz JavaScript, aby przeglądać gadżety i korzystać z koszyka.</p></noscript>
+      <p class="catalogue-demo-note"><span></span> Wersja pokazowa · produkty i ceny są przykładowe</p>
+    </section>
+
+    <section id="gift-ideas" class="gift-section container" aria-labelledby="gift-title">
+      <div class="gift-banner">
+        <div class="gift-copy"><span class="eyebrow">MISJA: TRAFIONY PREZENT</span><h2 id="gift-title">Dla tych, którzy<br>mają już <span>wszystko.</span></h2><p>Założymy się, że tego jeszcze nie mają?<br>Podaruj coś nieoczywistego. I trochę frajdy.</p><a href="#catalogue" data-filter="all" class="button button-dark">Wybierz prezent <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        <div class="gift-visual"><div class="gift-orbit" aria-hidden="true"></div><img src="./assets/astronaut.png" alt="Projektor w kształcie astronauty — pomysł na prezent" width="1024" height="1024" loading="lazy"><span class="gift-sticker">EFEKT<br><strong>WOW!</strong></span><span class="gift-star" aria-hidden="true">✦</span></div>
+      </div>
+    </section>
+
+    <section class="values-section container" aria-label="Cała filozofia Funny Gadgets">
+      <div class="value-item"><div class="value-icon red-icon"><svg class="icon"><use href="#i-smile"/></svg></div><div><h3>Dobry humor w zestawie</h3><p>Małe rzeczy, które zmieniają zwykły dzień.</p></div></div>
+      <div class="value-item"><div class="value-icon yellow-icon"><svg class="icon"><use href="#i-gift"/></svg></div><div><h3>Prezenty z charakterem</h3><p>Trochę praktyczne. Trochę totalnie odjechane.</p></div></div>
+      <div class="value-item"><div class="value-icon lavender-icon"><svg class="icon"><use href="#i-sparkle"/></svg></div><div><h3>Fun mamy w nazwie</h3><p>A frajdę z odkrywania — w każdym gadżecie.</p></div></div>
+    </section>
+
+    <section id="faq" class="faq-section container" aria-labelledby="faq-title">
+      <div class="faq-heading"><span class="eyebrow"><span class="section-number">02</span> WARTO WIEDZIEĆ</span><h2 id="faq-title">Dobre pytania.<br>Proste odpowiedzi.</h2><svg class="faq-spark" viewBox="0 0 64 64" aria-hidden="true"><path d="m32 3 5 20 19-10-11 19 16 9-23-1-5 21-8-20-20 8 12-18L3 20l21 5Z" fill="currentColor"/></svg></div>
+      <div class="faq-list">
+        <details><summary>Co znajdę w Funny Gadgets?<svg class="icon"><use href="#i-plus"/></svg></summary><p>Rzeczy, które dodają codzienności charakteru: zabawne lampki, gadżety do zabawy i kosmiczne dodatki do pokoju. Na początek przygotowaliśmy trzy przykładowe produkty.</p></details>
+        <details><summary>Czy mogę już złożyć zamówienie?<svg class="icon"><use href="#i-plus"/></svg></summary><p>To wersja pokazowa sklepu. Możesz obejrzeć produkty, dodawać je do koszyka i sprawdzić podsumowanie. Przyjmowanie zamówień i płatności uruchomimy w kolejnym etapie.</p></details>
+        <details><summary>Czy moje ulubione i koszyk się zapisują?<svg class="icon"><use href="#i-plus"/></svg></summary><p>Tak — w tej przeglądarce, jeśli pozwala ona zapisywać dane strony. Możesz wrócić do wybranych gadżetów po odświeżeniu. Nie potrzebujesz konta.</p></details>
+        <details><summary>Jak wygląda dostawa w tej wersji?<svg class="icon"><use href="#i-plus"/></svg></summary><p>W pokazowym koszyku dostawa kosztuje 12,90 zł, a od 199 zł jest bezpłatna. To przykładowe warunki, które dopracujemy przed otwarciem sklepu.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top"><div><span class="eyebrow">POWAŻNIE. BAW SIĘ DOBRZE.</span><p>Życie jest za krótkie<br>na nudne gadżety<span>✦</span></p></div><a class="footer-cta" href="#catalogue" data-filter="all" aria-label="Odkryj gadżety"><svg class="icon"><use href="#i-arrow"/></svg></a></div>
+    <div class="container footer-bottom"><a class="footer-brand" href="#"><img src="./assets/logo.png?v=2" alt="Funny Gadgets" width="1774" height="887"></a><span>© 2026 Funny Gadgets <span class="footer-domain">e-gadgets.com.pl</span></span><div class="footer-links"><a href="#catalogue" data-filter="all">Gadżety</a><a href="#gift-ideas">Na prezent</a><a href="#faq">Pytania i odpowiedzi</a></div><span class="footer-demo">Wersja pokazowa</span></div>
+  </footer>
+  <div id="overlay-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
